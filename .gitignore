@@ -1,0 +1,57 @@
+# ====================================================================
+# Git Ignore Configuration for Cricket Match Prediction Deployment
+# ====================================================================
+
+# Python Virtual Environments
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Bytecode, Cache & Compiled Files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# Jupyter Notebook Checkpoints
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+
+# Operating System & IDE Files
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Environment Variables & Secrets
+.env
+.env.*
+
+# Distribution & Build
+build/
+dist/
+*.egg-info/
+
+# Raw Archive Files (Keep processed CSVs, ignore compressed archives)
+data/raw/*.zip
+data/raw/*.tar.gz
+*.zip
+*.tar.gz
+*.tmp
+
+# Machine Learning Models (Keep production model, ignore scratch binaries)
+models/*.tmp
+models/*.bak
+!models/cricket_model.pkl
+
+# Keep Processed Data Required for Prediction Inference
+!data/processed/matches_clean.csv
+!data/processed/features.csv
+!data/raw/matches.csv
